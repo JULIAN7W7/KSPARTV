@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicio de entretenimiento premium. Todo tu contenido favorito en un solo lugar. Ahorra dinero comparado con múltiples suscripciones mensuales.">
+    <meta name="keywords" content="entretenimiento, streaming, películas, programas de tv, deportes, servicio premium">
+    <meta name="author" content="KSPARTV-JULI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="KSPARTV-JULI - Entretenimiento Premium">
+    <meta property="og:description" content="Todo tu contenido favorito en un solo lugar. Ahorra dinero comparado con múltiples suscripciones mensuales.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/og-image.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KSPARTV-JULI - Entretenimiento Premium">
+    <meta name="twitter:description" content="Todo tu contenido favorito en un solo lugar. Ahorra dinero comparado con múltiples suscripciones mensuales.">
+    <meta name="twitter:image" content="https://yourwebsite.com/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📺</text></svg>">
+    
+    <title>KSPARTV-JULI - Servicio de Entretenimiento Premium</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen" aria-hidden="true">
+        <svg class="loading-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" stroke="white" stroke-width="2" opacity="0.3"/>
+            <circle cx="50" cy="50" r="35" stroke="white" stroke-width="2" opacity="0.5"/>
+            <circle cx="50" cy="50" r="25" stroke="white" stroke-width="2" opacity="0.7"/>
+            <circle cx="50" cy="50" r="15" fill="white"/>
+        </svg>
+        <div class="loading-progress">
+            <div class="loading-progress-bar"></div>
+        </div>
+    </div>
+    
+    <!-- Cinematic Intro -->
+    <div class="cinematic-intro" id="cinematicIntro" aria-hidden="true">
+        <button class="skip-intro-btn" id="skipIntroBtn" aria-label="Saltar introducción">Saltar Intro</button>
+        <div class="intro-text" id="introText"></div>
+    </div>
+    
+    <!-- Dynamic Background -->
+    <div class="dynamic-background" id="dynamicBackground" aria-hidden="true">
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+        <div class="gradient-orb gradient-orb-3"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+        <div class="navbar-content">
+            <a href="#" class="navbar-logo" id="navbarLogo">KSPARTV-JULI</a>
+            <ul class="navbar-nav">
+                <li><a href="#benefits" class="navbar-link">Beneficios</a></li>
+                <li><a href="#features" class="navbar-link">Características</a></li>
+                <li><a href="#pricing" class="navbar-link">Precios</a></li>
+                <li><a href="#testimonials" class="navbar-link">Reseñas</a></li>
+                <li><a href="#faq" class="navbar-link">Preguntas</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <svg class="hero-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#0071e3"/>
+                        <stop offset="100%" style="stop-color:#764ba2"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="45" fill="url(#logoGradient)" opacity="0.1"/>
+                <rect x="25" y="30" width="50" height="40" rx="8" fill="url(#logoGradient)"/>
+                <circle cx="50" cy="50" r="12" fill="white"/>
+                <circle cx="50" cy="50" r="6" fill="url(#logoGradient)"/>
+            </svg>
+            <h1 class="hero-title" id="heroTitle">KSPARTV-JULI</h1>
+            <p class="hero-description" id="heroDescription">Servicio de entretenimiento premium. Todo tu contenido favorito en un solo lugar.</p>
+            <div class="hero-cta">
+                <a href="#cta" class="btn" id="heroCta">Comenzar</a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Desliza para explorar</span>
+                <div class="scroll-indicator-icon"></div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="section" id="benefits">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title" id="benefitsTitle">¿Por Qué Elegirnos</h2>
+                <p class="section-subtitle" id="benefitsSubtitle">Descubre los beneficios de nuestro servicio premium</p>
+            </div>
+            <div class="benefits-grid" id="benefitsGrid">
+                <!-- Benefits cards will be generated by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Comparison Section -->
+        <section class="section" id="comparison">
+            <div class="comparison scroll-animate">
+                <p class="comparison-text" id="comparisonText">
+                    "Lo que gastas en múltiples suscripciones mensuales,<br>
+                    podrías gastarlo en este servicio durante <strong>un año completo</strong>."
+                </p>
+                <div class="comparison-numbers" id="comparisonNumbers">
+                    <!-- Comparison numbers will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Content Highlights Section -->
+        <section class="section" id="highlights">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title" id="highlightsTitle">Biblioteca de Contenido</h2>
+                <p class="section-subtitle" id="highlightsSubtitle">Explora nuestra extensa colección</p>
+            </div>
+            <div class="highlights-grid" id="highlightsGrid">
+                <!-- Highlights will be generated by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="section" id="features">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title" id="featuresTitle">Características</h2>
+                <p class="section-subtitle" id="featuresSubtitle">Todo lo que necesitas para la mejor experiencia</p>
+            </div>
+            <div class="features-grid" id="featuresGrid">
+                <!-- Features will be generated by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Statistics Section -->
+        <section class="section" id="statistics">
+            <div class="statistics scroll-animate">
+                <div class="statistics-grid" id="statisticsGrid">
+                    <!-- Statistics will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="section" id="testimonials">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title" id="testimonialsTitle">Lo Que Dicen Nuestros Usuarios</h2>
+                <p class="section-subtitle" id="testimonialsSubtitle">Reseñas reales de usuarios reales</p>
+            </div>
+            <div class="testimonials-carousel" id="testimonialsCarousel">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Testimonials will be generated by JavaScript -->
+                </div>
+                <div class="testimonials-nav">
+                    <button class="testimonial-nav-btn" id="testimonialPrev" aria-label="Testimonio anterior">←</button>
+                    <button class="testimonial-nav-btn" id="testimonialNext" aria-label="Siguiente testimonio">→</button>
+                </div>
+                <div class="testimonials-dots" id="testimonialsDots">
+                    <!-- Dots will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section" id="faq">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title" id="faqTitle">Preguntas Frecuentes</h2>
+                <p class="section-subtitle" id="faqSubtitle">Encuentra respuestas a preguntas comunes</p>
+            </div>
+            <div class="faq-list" id="faqList">
+                <!-- FAQ items will be generated by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section class="section" id="pricing">
+            <div id="pricingSection">
+                <!-- Pricing will be generated by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section scroll-animate" id="cta">
+            <h2 class="cta-title" id="ctaTitle">¿Listo para Comenzar?</h2>
+            <p class="cta-description" id="ctaDescription">Únete a miles de usuarios satisfechos y comienza a disfrutar del entretenimiento premium hoy.</p>
+            <a href="#" class="btn" id="ctaButton">Comprar Ya</a>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p class="footer-text" id="footerText">KSPARTV-JULI</p>
+        <p class="footer-copyright">© 2026 KSPARTV-JULI. All Rights Reserved.</p>
+    </footer>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="#" class="whatsapp-button" id="whatsappButton" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos en WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+    
+    <!-- Terms and Conditions Modal -->
+    <div class="modal-overlay" id="termsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Términos y Condiciones</h2>
+                <button class="modal-close" id="closeTermsModal" aria-label="Cerrar">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="terms-content">
+                    <h3>1. Aviso Importante Sobre el Servicio</h3>
+                    <p>Es fundamental que comprenda y acepte los siguientes términos antes de proceder con cualquier transacción relacionada con los servicios de entretenimiento que se ofrecen a través de esta plataforma. Lea detenidamente cada uno de los puntos establecidos a continuación, ya que al continuar con el proceso de compra, usted estará manifestando su conformidad total e incondicional con todo lo aquí expuesto.</p>
+                    
+                    <h3>2. Naturaleza del Servicio y Relación Comercial</h3>
+                    <p>El servicio que se ofrece a través de esta plataforma consiste en la reventa de servicios de entretenimiento digital y streaming. Es importante aclarar de manera explícita y sin lugar a dudas que yo, como proveedor de este servicio, no soy el dueño original, creador, desarrollador, ni poseedor de los derechos de autor, marcas registradas, patentes, licencias, ni ningún otro tipo de propiedad intelectual asociada con las plataformas de streaming, servicios de entretenimiento, contenidos audiovisuales, canales de televisión, películas, series, programas, o cualquier otro tipo de material que se pueda acceder a través del servicio que se comercializa.</p>
+                    
+                    <p>Mi función se limita exclusivamente a actuar como intermediario en la comercialización de accesos a dichos servicios, proporcionando una alternativa conveniente y accesible para que los usuarios puedan disfrutar de contenido de entretenimiento de diversas fuentes a través de un único punto de acceso. No se establece ninguna relación contractual directa entre el usuario final y las plataformas originales de streaming a través de este servicio, ni se garantiza la disponibilidad, continuidad, calidad, o cualquier otro aspecto de los servicios proporcionados por dichas plataformas.</p>
+                    
+                    <h3>3. Exoneración Absoluta de Responsabilidad y Garantías</h3>
+                    <p>El usuario acepta que accede al servicio bajo su propio riesgo y responsabilidad. El proveedor no otorga garantías de ningún tipo, expresas o implícitas, sobre la licitud, estabilidad o permanencia de los enlaces, aplicaciones o plataformas de terceros enlazadas. Bajo ninguna circunstancia legal (contractual o extracontractual) el proveedor será responsable de sanciones, pérdidas de cuentas personales, daños informáticos en los dispositivos del usuario, o infracciones regulatorias derivadas del uso que el usuario final haga de esta alternativa de entretenimiento. El usuario asume de forma exclusiva cualquier contingencia legal o técnica en su jurisdicción.</p>
+                    
+                    <p>Esta limitación de responsabilidad se aplica a, pero no se limita a: pérdida de datos, pérdida de ingresos, pérdida de oportunidades comerciales, interrupción de actividades, daños a dispositivos, problemas de conectividad, inconvenientes técnicos, cambios en los servicios originales, suspensiones de cuentas, bloqueos, limitaciones, cambios en precios, discontinuidad de contenidos, modificaciones en las condiciones de las plataformas originales, y cualquier otro tipo de inconveniente que pueda ocurrir.</p>
+                    
+                    <h3>4. Disponibilidad y Continuidad del Servicio</h3>
+                    <p>No se garantiza la disponibilidad continua, ininterrumpida, o permanente del servicio. Las plataformas de streaming originales pueden cambiar sus condiciones, precios, disponibilidad, contenidos, o cualquier otro aspecto en cualquier momento y sin previo aviso. Como revendedor, no tengo control sobre estas decisiones y no puedo garantizar que el servicio se mantenga disponible en las mismas condiciones en las que fue adquirido originalmente.</p>
+                    
+                    <p>El usuario comprende y acepta que el servicio está sujeto a cambios, modificaciones, suspensiones, o discontinuidades por parte de las plataformas originales, y que estas situaciones están fuera de mi control y responsabilidad. En caso de que ocurra alguna interrupción o cambio en el servicio, se harán los esfuerzos razonables para informar al usuario y proporcionar alternativas cuando sea posible, pero no se garantiza que esto siempre sea factible.</p>
+                    
+                    <h3>5. Aspectos Técnicos y Requisitos</h3>
+                    <p>El usuario es responsable de contar con los dispositivos, conexiones a internet, y requisitos técnicos necesarios para utilizar el servicio adecuadamente. No me hago responsable de problemas técnicos, incompatibilidades, fallas de conexión, lentitud, buffering, problemas de calidad de imagen o sonido, o cualquier otro aspecto técnico que pueda afectar la experiencia del usuario.</p>
+                    
+                    <p>Se recomienda verificar que el dispositivo cumpla con los requisitos necesarios antes de adquirir el servicio. En el caso de dispositivos que requieren adaptadores o accesorios adicionales, estos deben ser proporcionados por el usuario o adquiridos por separado según corresponda.</p>
+                    
+                    <h3>6. Pagos y Reembolsos</h3>
+                    <p>Los pagos se realizan según los precios establecidos en el momento de la compra. No se garantiza que estos precios se mantengan en el futuro, ya que pueden estar sujetos a cambios según las condiciones de las plataformas originales o decisiones comerciales. Los reembolsos se evalúan caso por caso y no están garantizados en ninguna circunstancia.</p>
+                    
+                    <p>Una vez que el servicio ha sido proporcionado y el acceso ha sido entregado, no se realizarán reembolsos salvo en casos excepcionales que serán evaluados a discreción. El usuario comprende que al adquirir el servicio, está aceptando estas condiciones de pago y reembolso.</p>
+                    
+                    <h3>7. Uso Responsable y Legal</h3>
+                    <p>El usuario se compromete a utilizar el servicio de manera responsable, legal, y de acuerdo con las leyes y regulaciones aplicables en su jurisdicción. No me hago responsable del uso que el usuario haga del servicio ni de las consecuencias que puedan derivarse de dicho uso.</p>
+                    
+                    <p>El usuario acepta no utilizar el servicio para fines ilegales, no autorizados, o que violen los derechos de terceros. Cualquier violación de estas condiciones puede resultar en la suspensión inmediata del servicio sin derecho a reembolso.</p>
+                    
+                    <h3>8. Modificaciones a los Términos</h3>
+                    <p>Me reservo el derecho de modificar estos términos y condiciones en cualquier momento y sin previo aviso. El uso continuado del servicio después de cualquier modificación constituirá la aceptación de los nuevos términos. Se recomienda revisar periódicamente estos términos para estar al tanto de cualquier cambio.</p>
+                    
+                    <h3>9. Jurisdicción y Ley Aplicable</h3>
+                    <p>Estos términos y condiciones se rigen por las leyes aplicables en la jurisdicción correspondiente. Cualquier disputa o controversia que surja en relación con estos términos o el servicio será resuelta según las leyes y tribunales competentes en dicha jurisdicción.</p>
+                    
+                    <h3>10. Aceptación de Términos</h3>
+                    <p>Al continuar con el proceso de compra y hacer clic en el botón de aceptación a continuación, usted declara haber leído, comprendido, y aceptado todos los términos y condiciones establecidos en este documento. Entiende que está adquiriendo un servicio de reventa de entretenimiento digital y que no existe ninguna garantía sobre la continuidad, disponibilidad, o calidad del mismo.</p>
+                    
+                    <div class="terms-final-notice">
+                        <strong>AVISO:</strong><br>
+                        Al continuar con el proceso, usted manifiesta su conformidad y aceptación con los términos y condiciones establecidos.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="declineTerms">No Acepto</button>
+                <button class="btn" id="acceptTerms">Acepto los Términos</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "KSPARTV-JULI",
+        "description": "Servicio de entretenimiento premium. Todo tu contenido favorito en un solo lugar.",
+        "url": "https://yourwebsite.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://yourwebsite.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</body>
+</html>
