@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicio profesional de desbloqueo de teléfonos. iPhone, iPad y Android.">
+    <meta name="keywords" content="desbloqueo, telefono, iphone, android, icloud, unlock, USBLiter8">
+    <meta name="author" content="KSPARTV-JULI">
+    <meta name="robots" content="index, follow">
+    
+    <title>KSPAR UNL0CK - Servicio Profesional de Desbloqueo</title>
+    
+    <style>
+        :root {
+            --color-primary: #5e7ce2;
+            --color-primary-light: #8fa3e8;
+            --color-primary-dark: #3d5cc0;
+            --color-secondary: #a8d5ba;
+            --color-accent: #f4a261;
+            --color-background: #f8f9fa;
+            --color-surface: #ffffff;
+            --color-text-primary: #1d1d1f;
+            --color-text-secondary: #6e6e73;
+            --color-text-tertiary: #86868b;
+            --color-border: #d2d2d7;
+            --color-border-light: #e5e5ea;
+            
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+            --spacing-3xl: 6rem;
+            
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 2rem;
+            --font-size-4xl: 2.5rem;
+            --font-size-5xl: 3rem;
+            
+            --radius-sm: 0.5rem;
+            --radius-md: 1rem;
+            --radius-lg: 1.5rem;
+            --radius-xl: 2rem;
+            --radius-2xl: 2.5rem;
+            
+            --transition-fast: 200ms ease;
+            --transition-base: 300ms ease;
+            --transition-slow: 500ms ease;
+            
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .navbar {
+            background-color: rgba(248, 249, 250, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--color-border-light);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: var(--spacing-md) 0;
+        }
+        
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-logo {
+            color: var(--color-text-primary);
+            font-weight: 600;
+            font-size: var(--font-size-xl);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+        
+        .navbar-link {
+            color: var(--color-text-secondary);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+            font-size: var(--font-size-sm);
+        }
+        
+        .navbar-link:hover {
+            color: var(--color-primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--color-text-primary);
+            margin: 5px 0;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            text-align: center;
+            position: relative;
+            margin-top: 60px;
+        }
+        
+        .hero-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .hero-title {
+            color: var(--color-text-primary);
+            font-size: var(--font-size-5xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+        
+        .hero-description {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-xl);
+            max-width: 600px;
+            margin-bottom: var(--spacing-xl);
+            line-height: 1.6;
+        }
+        
+        .hero-cta {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-xl);
+            background-color: var(--color-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            font-size: var(--font-size-base);
+            transition: all var(--transition-fast);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-secondary {
+            background-color: var(--color-surface);
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-border);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--color-background);
+        }
+        
+        .section {
+            padding: var(--spacing-3xl) var(--spacing-lg);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .section-title {
+            color: var(--color-text-primary);
+            font-size: var(--font-size-3xl);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: -0.02em;
+        }
+        
+        .section-subtitle {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-lg);
+        }
+        
+        .benefits-grid, .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .benefit-card, .feature-card {
+            background-color: var(--color-surface);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+        }
+        
+        .benefit-card:hover, .feature-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+        
+        .benefit-icon, .feature-icon {
+            font-size: var(--font-size-4xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .benefit-title, .feature-title {
+            color: var(--color-text-primary);
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .benefit-description, .feature-description {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: 1.6;
+        }
+        
+        .exclusive-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: white;
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            margin: var(--spacing-xl) auto;
+            max-width: 1000px;
+            text-align: center;
+        }
+        
+        .exclusive-section h3 {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .exclusive-section p {
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .exclusive-badge {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .device-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .device-card {
+            background-color: var(--color-surface);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+        }
+        
+        .device-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+        
+        .device-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto var(--spacing-lg);
+        }
+        
+        .device-name {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .device-description {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+        
+        .device-price {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+        
+        .notice-section {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-xl) auto;
+            max-width: 1000px;
+        }
+        
+        .notice-section h3 {
+            color: var(--color-text-primary);
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .notice-section p {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+        }
+        
+        .notice-section strong {
+            color: var(--color-primary);
+        }
+        
+        .form-container {
+            width: min(100%, 540px);
+            max-width: 540px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 30px;
+            padding: var(--spacing-2xl);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            overflow: hidden;
+        }
+        
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .form-label {
+            display: block;
+            color: var(--color-text-primary);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .form-progress {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .step-dots {
+            display: flex;
+            gap: 0.45rem;
+        }
+        
+        .step-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.14);
+            transition: all var(--transition-fast);
+        }
+        
+        .step-dot.active {
+            width: 24px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+        }
+        
+        .step-dot.done {
+            background: var(--color-primary);
+        }
+        
+        .step-caption {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .form-step {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        
+        .step-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: 0.35rem;
+        }
+        
+        .step-subtitle {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .option-card {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            background: var(--color-surface);
+            color: var(--color-text-primary);
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+        }
+        
+        .option-card:hover,
+        .option-card.active {
+            border-color: rgba(94, 124, 226, 0.25);
+            background: rgba(94, 124, 226, 0.08);
+            color: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(94, 124, 226, 0.12);
+        }
+        
+        .form-helper {
+            margin-top: 0.6rem;
+            font-size: 0.85rem;
+            color: var(--color-text-tertiary);
+        }
+        
+        .step-actions {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.75rem;
+            margin-top: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+        
+        .btn-secondary {
+            background-color: var(--color-surface);
+            color: var(--color-text-primary);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--color-background);
+            color: var(--color-primary);
+            transform: translateY(-1px);
+        }
+        
+        .form-input, .form-select {
+            width: 100%;
+            padding: 0.95rem 1rem;
+            background-color: var(--color-background);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            color: var(--color-text-primary);
+            font-size: var(--font-size-base);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 4px rgba(94, 124, 226, 0.12);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .footer {
+            padding: var(--spacing-xl) var(--spacing-lg);
+            text-align: center;
+            background-color: var(--color-surface);
+            border-top: 1px solid var(--color-border-light);
+        }
+        
+        .footer-text {
+            color: var(--color-text-primary);
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .footer-copyright {
+            color: var(--color-text-tertiary);
+            font-size: var(--font-size-sm);
+        }
+        
+        .whatsapp-button {
+            position: fixed;
+            bottom: var(--spacing-xl);
+            right: var(--spacing-xl);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #25D366;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all var(--transition-base);
+            text-decoration: none;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .section-title {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .device-showcase, .benefits-grid, .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 1rem;
+                border-radius: 22px;
+            }
+
+            .option-grid {
+                grid-template-columns: 1fr;
+                gap: 0.6rem;
+            }
+
+            .option-card {
+                padding: 0.9rem;
+                font-size: 0.95rem;
+            }
+
+            .step-actions {
+                flex-direction: column;
+            }
+
+            .step-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .form-input, .form-select {
+                padding: 0.9rem 0.95rem;
+                font-size: 0.95rem;
+            }
+
+            .step-title {
+                font-size: 1rem;
+            }
+
+            .step-subtitle,
+            .form-helper {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-logo">KSPAR UNL0CK</a>
+            <button class="mobile-menu-btn" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav">
+                <li><a href="#services" class="navbar-link">Servicios</a></li>
+                <li><a href="#devices" class="navbar-link">Dispositivos</a></li>
+                <li><a href="#exclusive" class="navbar-link">Exclusivo</a></li>
+                <li><a href="#contact" class="navbar-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <svg class="hero-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#5e7ce2"/>
+                    <stop offset="100%" style="stop-color:#3d5cc0"/>
+                </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="45" fill="url(#logoGradient)" opacity="0.1"/>
+            <rect x="30" y="20" width="40" height="60" rx="5" stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+            <circle cx="50" cy="50" r="15" stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+            <path d="M45 50 L50 55 L55 45" stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+        </svg>
+        <h1 class="hero-title">KSPAR UNL0CK</h1>
+        <p class="hero-description">Servicio profesional de desbloqueo para iPhone, iPad y Android. Soluciones avanzadas y exclusivas.</p>
+        <div class="hero-cta">
+            <a href="#contact" class="btn">Solicitar Servicio</a>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="section-header">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Plataforma profesional con múltiples soluciones</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">📱</div>
+                <h3 class="benefit-title">FRP Multimarca</h3>
+                <p class="benefit-description">Bypass FRP para Samsung, Xiaomi, Motorola, Huawei y más marcas</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🍎</div>
+                <h3 class="benefit-title">Servicios Apple</h3>
+                <p class="benefit-description">iCloud Clean, Desbloqueo MacBook y soluciones iOS</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🔓</div>
+                <h3 class="benefit-title">Desbloqueos</h3>
+                <p class="benefit-description">Desbloqueo de pantalla, patrón, PIN y contraseña</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🌐</div>
+                <h3 class="benefit-title">Liberaciones de Compañía</h3>
+                <p class="benefit-description">Liberación para usar cualquier operador en el mundo</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🧹</div>
+                <h3 class="benefit-title">Limpias IMEI Blacklist</h3>
+                <p class="benefit-description">Limpieza de IMEI en listas negras reportadas</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🔍</div>
+                <h3 class="benefit-title">Búsquedas de Información</h3>
+                <p class="benefit-description">Consultas detalladas de IMEI y estado de dispositivos</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3 class="benefit-title">eSIMs</h3>
+                <p class="benefit-description">Activación y configuración de eSIMs</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Exclusive Section (USBLiter8) -->
+    <section class="section" id="exclusive">
+        <div class="section-header">
+            <h2 class="section-title">Servicio Exclusivo</h2>
+            <p class="section-subtitle">Tecnología de vanguardia</p>
+        </div>
+        <div class="exclusive-section">
+            <span class="exclusive-badge">NUEVO</span>
+            <h3>USBLiter8 - Bypass Passcode Permanente</h3>
+            <p>
+                Vulnerabilidad exclusiva en procesadores A12 y A13. Bypass de código de acceso permanente para iPhone XR, XS, XS Max, 11, 11 Pro, 11 Pro Max y modelos equivalentes.
+            </p>
+            <p>
+                Esta vulnerabilidad es permanente y hasta el momento no tiene parche conocido. Solución exclusiva y profesional.
+            </p>
+            <a href="#contact" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Consultar Disponibilidad</a>
+        </div>
+    </section>
+    
+    <!-- Notice Section -->
+    <section class="section">
+        <div class="notice-section">
+            <h3>Información Importante</h3>
+            <p>
+                Algunos de nuestros servicios son remotos, mientras que otros requieren conexión física del dispositivo. 
+                Utilizamos herramientas profesionales como <strong>iRemoval Pro, Mina Activator, TFT Unlock</strong> y otras soluciones avanzadas.
+                <br><br>
+                <strong>Servicios disponibles:</strong><br>
+                • iCloud Bypass - iPhone 5s hasta 17 Pro Max (con y sin señal)<br>
+                • FRP Bypass - Android (Google Account Lock)<br>
+                • Desbloqueo de Red - Liberación para usar cualquier operador<br>
+                • Root - Acceso completo a Android<br>
+                • Desbloqueo de Pantalla - Patrón, PIN, contraseña Android<br>
+                • iPad WIFI - Modelos específicos (solo WIFI)
+            </p>
+        </div>
+    </section>
+    
+    <!-- Devices Section -->
+    <section class="section" id="devices">
+        <div class="section-header">
+            <h2 class="section-title">Dispositivos y Precios</h2>
+            <p class="section-subtitle">El precio varía según el tipo de dispositivo</p>
+        </div>
+        <div class="device-showcase">
+            <!-- iPhone Device Card -->
+            <div class="device-card">
+                <svg class="device-icon" viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="iphoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#5e7ce2"/>
+                            <stop offset="100%" style="stop-color:#3d5cc0"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="5" width="80" height="170" rx="12" stroke="url(#iphoneGradient)" stroke-width="2" fill="rgba(94, 124, 226, 0.05)"/>
+                    <rect x="15" y="15" width="70" height="150" rx="8" stroke="url(#iphoneGradient)" stroke-width="1" fill="rgba(94, 124, 226, 0.1)"/>
+                    <rect x="35" y="20" width="30" height="8" rx="4" fill="url(#iphoneGradient)" opacity="0.6"/>
+                    <rect x="35" y="155" width="30" height="3" rx="1.5" fill="url(#iphoneGradient)" opacity="0.4"/>
+                </svg>
+                <h3 class="device-name">iPhone</h3>
+                <p class="device-description">
+                    <strong>Modelos:</strong> iPhone 5s hasta 17 Pro Max<br>
+                    <strong>Servicios:</strong> iCloud Bypass, MDM, Operadora<br>
+                    <small>Varía según modelo y tipo de bloqueo</small>
+                </p>
+                <div class="device-price">Desde $80.000</div>
+            </div>
+            
+            <!-- Android Device Card -->
+            <div class="device-card">
+                <svg class="device-icon" viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="androidGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#a8d5ba"/>
+                            <stop offset="100%" style="stop-color:#7cb08f"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="12" y="8" width="76" height="164" rx="10" stroke="url(#androidGradient)" stroke-width="2" fill="rgba(168, 213, 186, 0.05)"/>
+                    <rect x="16" y="20" width="68" height="140" rx="6" stroke="url(#androidGradient)" stroke-width="1" fill="rgba(168, 213, 186, 0.1)"/>
+                    <circle cx="50" cy="14" r="4" stroke="url(#androidGradient)" stroke-width="1" fill="url(#androidGradient)" opacity="0.6"/>
+                    <circle cx="50" cy="165" r="5" stroke="url(#androidGradient)" stroke-width="1" fill="none" opacity="0.4"/>
+                </svg>
+                <h3 class="device-name">Android</h3>
+                <p class="device-description">
+                    <strong>Marcas:</strong> Samsung, Xiaomi, Motorola, Huawei, etc.<br>
+                    <strong>Servicios:</strong> FRP Bypass, Root, Operadora, Pantalla<br>
+                    <small>Varía según modelo y tipo de bloqueo</small>
+                </p>
+                <div class="device-price">Desde $50.000</div>
+            </div>
+            
+            <!-- iPad Device Card -->
+            <div class="device-card">
+                <svg class="device-icon" viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="ipadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#f4a261"/>
+                            <stop offset="100%" style="stop-color:#e76f51"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="5" y="5" width="90" height="170" rx="8" stroke="url(#ipadGradient)" stroke-width="2" fill="rgba(244, 162, 97, 0.05)"/>
+                    <rect x="10" y="10" width="80" height="160" rx="6" stroke="url(#ipadGradient)" stroke-width="1" fill="rgba(244, 162, 97, 0.1)"/>
+                    <circle cx="50" cy="170" r="3" fill="url(#ipadGradient)" opacity="0.6"/>
+                </svg>
+                <h3 class="device-name">iPad WIFI</h3>
+                <p class="device-description">
+                    <strong>Modelos:</strong> Solo modelos WIFI<br>
+                    <strong>Servicios:</strong> iCloud Bypass específico<br>
+                    <small>Varía según modelo y tipo de bloqueo</small>
+                </p>
+                <div class="device-price">Desde $70.000</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="section-header">
+            <h2 class="section-title">Características</h2>
+            <p class="section-subtitle">Por qué elegirnos</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Rápido</h3>
+                <p class="feature-description">Desbloqueo en minutos, no días</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">Seguro</h3>
+                <p class="feature-description">Sin riesgo para tu dispositivo</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3 class="feature-title">Profesional</h3>
+                <p class="feature-description">Herramientas especializadas</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3 class="feature-title">Garantizado</h3>
+                <p class="feature-description">Alta tasa de éxito</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form Section -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <h2 class="section-title">Formulario de Contacto</h2>
+            <p class="section-subtitle">Proporciona los detalles de tu dispositivo</p>
+        </div>
+        <div class="form-container">
+            <form id="unlockForm">
+                <div class="form-progress" aria-label="Progreso del formulario">
+                    <div class="step-dots">
+                        <span class="step-dot active"></span>
+                        <span class="step-dot"></span>
+                        <span class="step-dot"></span>
+                        <span class="step-dot"></span>
+                    </div>
+                    <div class="step-caption" id="stepCaption">Elige tu dispositivo</div>
+                </div>
+
+                <div class="form-step active" data-step="1">
+                    <div class="form-group">
+                        <h3 class="step-title">¿Qué tipo de dispositivo tienes?</h3>
+                        <p class="step-subtitle">Te mostraremos solo las opciones que aplican.</p>
+                        <div class="option-grid" id="deviceOptions">
+                            <button type="button" class="option-card" data-value="iphone">📱 iPhone</button>
+                            <button type="button" class="option-card" data-value="android">🤖 Android</button>
+                            <button type="button" class="option-card" data-value="ipad">📟 iPad WIFI</button>
+                        </div>
+                        <input type="hidden" id="deviceType" required>
+                    </div>
+                    <div class="step-actions">
+                        <div></div>
+                        <button type="button" class="btn next-step" data-next="2">Siguiente</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" data-step="2">
+                    <div class="form-group">
+                        <h3 class="step-title">¿Cuál es el modelo?</h3>
+                        <p class="step-subtitle">Esto nos ayuda a identificar mejor tu caso.</p>
+                        <input type="text" class="form-input" id="deviceModel" placeholder="Ej: iPhone 15 Pro Max, Samsung S24">
+                        <p class="form-helper">Puedes escribir el modelo exacto o una referencia.</p>
+                    </div>
+                    <div class="step-actions">
+                        <button type="button" class="btn btn-secondary prev-step" data-prev="1">Anterior</button>
+                        <button type="button" class="btn next-step" data-next="3">Siguiente</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" data-step="3">
+                    <div class="form-group">
+                        <h3 class="step-title">¿Qué servicio necesitas?</h3>
+                        <p class="step-subtitle">Solo verás las opciones compatibles con tu dispositivo.</p>
+                        <select class="form-select" id="lockType" disabled>
+                            <option value="">Selecciona una opción</option>
+                        </select>
+                        <p class="form-helper">Si no ves una opción, probablemente no aplica a tu caso.</p>
+                    </div>
+                    <div class="step-actions">
+                        <button type="button" class="btn btn-secondary prev-step" data-prev="2">Anterior</button>
+                        <button type="button" class="btn next-step" data-next="4">Siguiente</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" data-step="4">
+                    <div class="form-group">
+                        <h3 class="step-title" id="step4Title">Tu nombre</h3>
+                        <p class="step-subtitle" id="step4Subtitle">Con este dato te contactaremos por WhatsApp.</p>
+                        <input type="text" class="form-input" id="customerName" placeholder="Tu nombre">
+                        <input type="text" class="form-input" id="serviceDetails" placeholder="Ej: desbloqueo de cuenta, servicio específico..." style="display: none; margin-top: 0.75rem;">
+                        <p class="form-helper" id="step4Helper">Tu información se usará solo para responderte.</p>
+                    </div>
+                    <div class="step-actions">
+                        <button type="button" class="btn btn-secondary prev-step" data-prev="3">Anterior</button>
+                        <button type="submit" class="btn">Enviar por WhatsApp</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">KSPAR UNL0CK</p>
+        <p class="footer-copyright">© 2026 KSPAR UNL0CK. Todos los derechos reservados.</p>
+    </footer>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/573227147600" class="whatsapp-button" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos en WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+    
+    <!-- Form Handler Script -->
+    <script>
+        const form = document.getElementById('unlockForm');
+        const deviceTypeInput = document.getElementById('deviceType');
+        const deviceModelInput = document.getElementById('deviceModel');
+        const lockTypeSelect = document.getElementById('lockType');
+        const customerNameInput = document.getElementById('customerName');
+        const serviceDetailsInput = document.getElementById('serviceDetails');
+        const step4Title = document.getElementById('step4Title');
+        const step4Subtitle = document.getElementById('step4Subtitle');
+        const step4Helper = document.getElementById('step4Helper');
+        const steps = Array.from(document.querySelectorAll('.form-step'));
+        const stepDots = Array.from(document.querySelectorAll('.step-dot'));
+        const stepCaption = document.getElementById('stepCaption');
+        const deviceOptions = Array.from(document.querySelectorAll('.option-card'));
+        const nextButtons = Array.from(document.querySelectorAll('.next-step'));
+        const prevButtons = Array.from(document.querySelectorAll('.prev-step'));
+
+        const serviceOptions = {
+            iphone: [
+                { value: 'apple', label: 'Servicios Apple (iCloud Clean, MacBook)' },
+                { value: 'info', label: 'Búsquedas de Información (por IMEI)' },
+                { value: 'passcode', label: 'Passcode Bypass (USBLiter8)' },
+                { value: 'other', label: 'Otro Servicio' }
+            ],
+            android: [
+                { value: 'frp', label: 'FRP Multimarca' },
+                { value: 'unlock', label: 'Desbloqueos (Pantalla, Patrón, PIN)' },
+                { value: 'mora', label: 'Quitar bloqueo por mora' },
+                { value: 'carrier', label: 'Liberaciones de Compañía' },
+                { value: 'blacklist', label: 'Limpias IMEI Blacklist' },
+                { value: 'info', label: 'Búsquedas de Información (por IMEI)' },
+                { value: 'esim', label: 'eSIMs' },
+                { value: 'other', label: 'Otro Servicio' }
+            ],
+            ipad: [
+                { value: 'apple', label: 'Servicios Apple (iCloud Clean, MacBook)' },
+                { value: 'info', label: 'Búsquedas de Información (por IMEI)' },
+                { value: 'other', label: 'Otro Servicio' }
+            ]
+        };
+
+        let currentStep = 1;
+
+        const stepCaptions = [
+            'Elige tu dispositivo',
+            'Indica el modelo',
+            'Selecciona el servicio',
+            'Tu nombre'
+        ];
+
+        function updateStep4Content() {
+            const isOtherService = lockTypeSelect.value === 'other';
+            serviceDetailsInput.style.display = isOtherService ? 'block' : 'none';
+
+            if (isOtherService) {
+                step4Title.textContent = 'Especifica o di qué servicio necesitas';
+                step4Subtitle.textContent = 'Describe mejor tu caso para ayudarte con precisión.';
+                step4Helper.textContent = 'Tu respuesta nos ayudará a entender mejor la solicitud.';
+            } else {
+                step4Title.textContent = 'Tu nombre';
+                step4Subtitle.textContent = 'Con este dato te contactaremos por WhatsApp.';
+                step4Helper.textContent = 'Tu información se usará solo para responderte.';
+            }
+        }
+
+        function showStep(stepNumber) {
+            currentStep = stepNumber;
+            steps.forEach((step, index) => {
+                step.classList.toggle('active', index + 1 === stepNumber);
+            });
+
+            stepDots.forEach((dot, index) => {
+                const dotNumber = index + 1;
+                dot.classList.toggle('active', dotNumber === stepNumber);
+                dot.classList.toggle('done', dotNumber < stepNumber);
+            });
+
+            stepCaption.textContent = stepCaptions[stepNumber - 1] || '';
+
+            if (stepNumber === 4) {
+                updateStep4Content();
+            }
+        }
+
+        function updateServiceOptions() {
+            const selectedDevice = deviceTypeInput.value;
+            const options = serviceOptions[selectedDevice] || [];
+
+            lockTypeSelect.innerHTML = '<option value="">Selecciona una opción</option>';
+            options.forEach((option) => {
+                const opt = document.createElement('option');
+                opt.value = option.value;
+                opt.textContent = option.label;
+                lockTypeSelect.appendChild(opt);
+            });
+
+            if (selectedDevice) {
+                lockTypeSelect.removeAttribute('disabled');
+            } else {
+                lockTypeSelect.setAttribute('disabled', 'disabled');
+            }
+        }
+
+        function selectDevice(value) {
+            deviceTypeInput.value = value;
+            deviceOptions.forEach((button) => {
+                button.classList.toggle('active', button.dataset.value === value);
+            });
+            updateServiceOptions();
+        }
+
+        function validateStep(stepNumber) {
+            if (stepNumber === 1 && !deviceTypeInput.value) {
+                alert('Selecciona un tipo de dispositivo para continuar.');
+                return false;
+            }
+
+            if (stepNumber === 2 && !deviceModelInput.value.trim()) {
+                alert('Escribe el modelo de tu dispositivo.');
+                return false;
+            }
+
+            if (stepNumber === 3 && !lockTypeSelect.value) {
+                alert('Selecciona el servicio que necesitas.');
+                return false;
+            }
+
+            if (stepNumber === 4) {
+                if (lockTypeSelect.value === 'other' && !serviceDetailsInput.value.trim()) {
+                    alert('Especifica o di qué servicio necesitas para continuar.');
+                    return false;
+                }
+
+                if (lockTypeSelect.value !== 'other' && !customerNameInput.value.trim()) {
+                    alert('Escribe tu nombre para continuar.');
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        deviceOptions.forEach((button) => {
+            button.addEventListener('click', () => {
+                selectDevice(button.dataset.value);
+                showStep(2);
+            });
+        });
+
+        nextButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                if (validateStep(currentStep)) {
+                    showStep(Number(button.dataset.next));
+                }
+            });
+        });
+
+        lockTypeSelect.addEventListener('change', () => {
+            updateStep4Content();
+        });
+
+        prevButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                showStep(Number(button.dataset.prev));
+            });
+        });
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (!validateStep(1) || !validateStep(2) || !validateStep(3) || !validateStep(4)) {
+                return;
+            }
+            
+            const deviceType = deviceTypeInput.value;
+            const deviceModel = deviceModelInput.value.trim();
+            const lockType = lockTypeSelect.value;
+            const customerName = customerNameInput.value.trim();
+            
+            const lockTypeText = {
+                'frp': 'FRP Multimarca',
+                'apple': 'Servicios Apple (iCloud Clean, MacBook)',
+                'unlock': 'Desbloqueos (Pantalla, Patrón, PIN)',
+                'mora': 'Quitar bloqueo por mora',
+                'carrier': 'Liberaciones de Compañía',
+                'blacklist': 'Limpias IMEI Blacklist',
+                'info': 'Búsquedas de Información (por IMEI)',
+                'esim': 'eSIMs',
+                'passcode': 'Passcode Bypass (USBLiter8)',
+                'other': 'Otro Servicio'
+            };
+            
+            const deviceTypeText = {
+                'iphone': 'iPhone',
+                'android': 'Android',
+                'ipad': 'iPad WIFI'
+            };
+            
+            const serviceDetails = lockTypeSelect.value === 'other' ? `\n• ✍️ Detalle del servicio: ${serviceDetailsInput.value.trim()}` : '';
+            const message = `Hola, estoy interesado en un servicio de KSPAR UNL0CK.\n\n•  Dispositivo: ${deviceTypeText[deviceType]}\n•  Modelo: ${deviceModel}\n•  Servicio requerido: ${lockTypeText[lockType]}${serviceDetails}\n\n•  Mi nombre es: ${customerName}`;
+            
+            const whatsappUrl = `https://wa.me/573227147600?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+
+        showStep(1);
+        updateServiceOptions();
+    </script>
+</body>
+</html>
